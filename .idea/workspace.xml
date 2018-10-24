@@ -28,38 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HandlerToast.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toast/src/main/java/lfp/support/toast/HandlerToast.java">
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/lfp/support/toastutils/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bintrayUpload.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toast/bintrayUpload.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toast/project.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/toast/local.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="418">
+              <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -67,8 +40,39 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="57">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToastUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/toast/src/main/java/lfp/support/toast/ToastUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="85" column="31" lean-forward="true" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+              <folding>
+                <element signature="docComment;class#ToastUtils#0" />
+                <element signature="method#ToastUtils#0;class#ToastUtils#0" />
+                <element signature="docComment;method#init#0;class#ToastUtils#0" />
+                <element signature="docComment;method#cancel#0;class#ToastUtils#0" />
+                <element signature="docComment;method#show#0;class#ToastUtils#0" />
+                <element signature="docComment;method#cancelSimple#0;class#ToastUtils#0" />
+                <element signature="method#cancelSimple#0;class#ToastUtils#0" />
+                <element signature="docComment;method#showSimple#0;class#ToastUtils#0" />
+                <element signature="method#showSimple#0;class#ToastUtils#0" />
+                <element signature="docComment;method#showSimple#1;class#ToastUtils#0" />
+                <element signature="method#showSimple#1;class#ToastUtils#0" />
+                <element signature="method#checkInstance#0;class#ToastUtils#0" />
+                <element signature="docComment;method#build#0;class#ToastUtils#0" />
+                <element signature="class#Build#0;class#ToastUtils#0" />
+                <element signature="method#setToastProxy#0;class#Build#0;class#ToastUtils#0" />
+                <element signature="method#create#0;class#Build#0;class#ToastUtils#0" />
+                <element signature="class#DefualtProxy#0;class#ToastUtils#0" />
+                <element signature="method#onToastCreated#0;class#DefualtProxy#0;class#ToastUtils#0" />
+                <element signature="method#onCreateView#0;class#DefualtProxy#0;class#ToastUtils#0" />
+                <element signature="method#onViewCreated#0;class#DefualtProxy#0;class#ToastUtils#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -4607,6 +4611,7 @@
         <option value="$PROJECT_DIR$/library/local.properties" />
         <option value="$PROJECT_DIR$/library/bintrayUpload.gradle" />
         <option value="$PROJECT_DIR$/toast/project.properties" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -4633,7 +4638,72 @@
             <path>
               <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
               <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="toastutils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="toast" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="toast" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="toast" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="toast" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ToastUtils" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ToastUtils" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="toast" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="toast" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -4818,13 +4888,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/toast/src/main/java/lfp/support/toast/HandlerToast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -4846,13 +4909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/toast/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/toast/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state />
@@ -4861,14 +4917,71 @@
     <entry file="file://$PROJECT_DIR$/toast/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toast/project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toast/src/main/java/lfp/support/toast/HandlerToast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/toast/src/main/java/lfp/support/toast/ToastUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="85" column="31" lean-forward="true" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+          <folding>
+            <element signature="docComment;class#ToastUtils#0" />
+            <element signature="method#ToastUtils#0;class#ToastUtils#0" />
+            <element signature="docComment;method#init#0;class#ToastUtils#0" />
+            <element signature="docComment;method#cancel#0;class#ToastUtils#0" />
+            <element signature="docComment;method#show#0;class#ToastUtils#0" />
+            <element signature="docComment;method#cancelSimple#0;class#ToastUtils#0" />
+            <element signature="method#cancelSimple#0;class#ToastUtils#0" />
+            <element signature="docComment;method#showSimple#0;class#ToastUtils#0" />
+            <element signature="method#showSimple#0;class#ToastUtils#0" />
+            <element signature="docComment;method#showSimple#1;class#ToastUtils#0" />
+            <element signature="method#showSimple#1;class#ToastUtils#0" />
+            <element signature="method#checkInstance#0;class#ToastUtils#0" />
+            <element signature="docComment;method#build#0;class#ToastUtils#0" />
+            <element signature="class#Build#0;class#ToastUtils#0" />
+            <element signature="method#setToastProxy#0;class#Build#0;class#ToastUtils#0" />
+            <element signature="method#create#0;class#Build#0;class#ToastUtils#0" />
+            <element signature="class#DefualtProxy#0;class#ToastUtils#0" />
+            <element signature="method#onToastCreated#0;class#DefualtProxy#0;class#ToastUtils#0" />
+            <element signature="method#onCreateView#0;class#DefualtProxy#0;class#ToastUtils#0" />
+            <element signature="method#onViewCreated#0;class#DefualtProxy#0;class#ToastUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/lfp/support/toastutils/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="57">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>

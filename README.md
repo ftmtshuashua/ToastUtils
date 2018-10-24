@@ -12,6 +12,17 @@
 implementation 'support.lfp:toast:1.0'
 ```
 
+在任何地方调用showSimple方法来显示Toast
+```
+ToastUtils.showSimple("Toast info ...");
+```
+
+创建一个自定义的Toast
+```
+ToastUtils.build().create();
+```
+
+
 ## 问题反馈
 
 如果你在使用ToastUtils中遇到任何问题可以提[Issues](https://github.com/ftmtshuashua/ToastUtils/issues)出来。另外欢迎大家为ToastUtils贡献智慧，欢迎大家[Fork and Pull requests](https://github.com/ftmtshuashua/ToastUtils)。
