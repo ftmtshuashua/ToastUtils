@@ -28,6 +28,7 @@ public class HandlerToast extends Toast implements Runnable {
      *
      * @param context The context to use.  Usually your {@link Application}
      *                or {@link Activity} object.
+     * @param proxy   自定义Toast的代理对象
      */
     public HandlerToast(Context context, ToastProxy proxy) {
         super(context);
@@ -51,7 +52,7 @@ public class HandlerToast extends Toast implements Runnable {
         mHandler.removeCallbacks(this);
         if (Looper.myLooper() == Looper.getMainLooper()) {
             super.show();
-            mProxy.onShow(mProxy.getData() );
+            mProxy.onShow(mProxy.getData());
         } else {
             mHandler.postDelayed(this, 30);
         }

@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-
 android {
     compileSdkVersion 28
     resourcePrefix "lfp_toast_"
@@ -17,3 +16,4 @@ android {
 
 
 }
+apply from: "bintrayUpload.gradle"

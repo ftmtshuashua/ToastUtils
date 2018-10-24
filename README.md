@@ -1,4 +1,4 @@
-# [ToastUtils] 简介
+# ToastUtils 简介
 
 - 可拓展
 - 线程可用
@@ -9,7 +9,7 @@
 
 设置依赖项
 ```
-implementation ''
+implementation 'support.lfp:toast:1.0'
 ```
 
 ## 问题反馈
