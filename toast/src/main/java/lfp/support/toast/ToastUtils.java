@@ -17,7 +17,6 @@ import android.widget.Toast;
  * </pre>
  */
 public class ToastUtils<T> {
-
     private static ToastUtils<CharSequence> mInstance;
     private ToastProxy<T> mProxy;
 
@@ -121,8 +120,7 @@ public class ToastUtils<T> {
 
     }
 
-    //    CharSequence
-    public static final class DefualtProxy extends ToastProxy<CharSequence> {
+    private static final class DefualtProxy extends ToastProxy<CharSequence> {
 
         TextView mTV_Info;
 
@@ -134,7 +132,7 @@ public class ToastUtils<T> {
 
         @Override
         protected View onCreateView(Context context) {
-            return LayoutInflater.from(context).inflate(R.layout.layout_tost, null);
+            return LayoutInflater.from(context).inflate(R.layout.layout_simple_tost, null);
         }
 
         @Override

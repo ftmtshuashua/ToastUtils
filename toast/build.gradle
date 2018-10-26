@@ -1,19 +1,13 @@
 apply plugin: 'com.android.library'
 android {
     compileSdkVersion 28
-    resourcePrefix "lfp_toast_"
-
-
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
-
-
+        versionName "1.1"
     }
-
 
 }
 apply from: "bintrayUpload.gradle"

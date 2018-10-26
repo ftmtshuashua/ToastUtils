@@ -8,6 +8,9 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.Toast;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 /**
  * <pre>
  * Tip:
@@ -35,7 +38,6 @@ public class HandlerToast extends Toast implements Runnable {
         mContext = context;
         mProxy = proxy;
         mProxy.onToastCreated(this);
-
     }
 
     @Override
@@ -44,23 +46,23 @@ public class HandlerToast extends Toast implements Runnable {
         mProxy.onViewCreated(view);
     }
 
-
     @Override
     public void show() {
         if (getView() == null) setView(mProxy.onCreateView(mContext));
 
         mHandler.removeCallbacks(this);
         if (Looper.myLooper() == Looper.getMainLooper()) {
-            super.show();
+            showInsure();
             mProxy.onShow(mProxy.getData());
         } else {
-            mHandler.postDelayed(this, 30);
+            mHandler.post(this);
+//            mHandler.postDelayed(this, 30);
         }
     }
 
     @Override
     public void run() {
-        super.show();
+        showInsure();
         mProxy.onShow(mProxy.getData());
     }
 
@@ -68,5 +70,21 @@ public class HandlerToast extends Toast implements Runnable {
     public void cancel() {
         super.cancel();
         mHandler.removeCallbacks(this);
+    }
+
+    /**
+     * 确保Toast正确显示
+     */
+    private void showInsure() {
+        try {
+            Field tn = getClass().getSuperclass().getDeclaredField("mTN");
+            tn.setAccessible(true);
+            Object obj_TN = tn.get(this);
+            Method hide_toast = obj_TN.getClass().getMethod("handleHide");
+            hide_toast.invoke(obj_TN);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        super.show();
     }
 }
