@@ -10,7 +10,7 @@
 
 设置依赖项
 ```
-implementation 'support.lfp:toast:1.0'
+implementation 'support.lfp:toast:1.1'
 ```
 
 在任何地方调用showSimple方法来显示Toast
