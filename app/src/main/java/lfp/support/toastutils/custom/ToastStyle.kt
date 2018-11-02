@@ -1,13 +1,14 @@
 package lfp.support.toastutils.custom
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import lfp.support.toast.ToastProxy
 import lfp.support.toast.ToastUtils
+import lfp.support.toast.ToastViewPorxy
 import lfp.support.toastutils.R
 
 /**
@@ -20,42 +21,36 @@ import lfp.support.toastutils.R
  */
 
 object ToastStyle {
-    //    var toast = ToastUtils.build()
     var toast: ToastUtils<ToastData>? = null
 
     fun init(context: Context) {
-        toast = ToastUtils.build(context).setToastProxy(proxy).create() as ToastUtils<ToastData>
+        Log.e("ToastStyle","初始化。。。")
+        toast = ToastUtils.build(context, object : ToastViewPorxy<ToastData>() {
+
+            var IV_Head: ImageView? = null
+            var TV_Name: TextView? = null
+            var TV_Info: TextView? = null
+            override fun onBindToast(toast: Toast?) {
+                toast?.duration = Toast.LENGTH_SHORT
+            }
+
+            override fun onShow(view: View?, data: ToastData?) {
+                IV_Head?.setImageResource(data?.headres!!)
+                TV_Name?.text = data?.name
+                TV_Info?.text = data?.info
+            }
+
+            override fun onCreateView(context: Context?): View {
+                var view = LayoutInflater.from(context).inflate(R.layout.custom_toast, null)
+                IV_Head = view?.findViewById(R.id.IV_Head)
+                TV_Name = view?.findViewById(R.id.TV_Name)
+                TV_Info = view?.findViewById(R.id.TV_Info)
+                return view
+            }
+        })
     }
 
     fun show(data: ToastData) = toast?.show(data)
-
-    val proxy = object : ToastProxy<ToastData>() {
-
-        override fun onToastCreated(toast: Toast?) {
-            super.onToastCreated(toast)
-            toast?.duration = Toast.LENGTH_SHORT
-        }
-
-        var IV_Head: ImageView? = null
-        var TV_Name: TextView? = null
-        var TV_Info: TextView? = null
-        override fun onViewCreated(view: View?) {
-            super.onViewCreated(view)
-            IV_Head = view?.findViewById(R.id.IV_Head)
-            TV_Name = view?.findViewById(R.id.TV_Name)
-            TV_Info = view?.findViewById(R.id.TV_Info)
-        }
-
-        override fun onCreateView(context: Context?): View {
-            return LayoutInflater.from(context).inflate(R.layout.custom_toast, null)
-        }
-
-        override fun onShow(obj: ToastData?) {
-            IV_Head?.setImageResource(obj?.headres!!)
-            TV_Name?.text = obj?.name
-            TV_Info?.text = obj?.info
-        }
-    }
 
 
 }

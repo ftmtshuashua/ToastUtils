@@ -6,21 +6,25 @@
 - 解决Toast有时候不能正常显示的问题
 
 
-## 入门指南
+## 快速上手
 
 设置依赖项
 ```
 implementation 'support.lfp:toast:1.1'
 ```
+初始化
+```
+ToastUtils.init(this)
+```
 
 在任何地方调用showSimple方法来显示Toast
 ```
-ToastUtils.showSimple("Toast info ...");
+ToastUtils.showSimple("Toast info ...")
 ```
 
-创建一个自定义的Toast
+创建一个自定义样式的Toast
 ```
-ToastUtils.build().create();
+ToastUtils.build()
 ```
 
 

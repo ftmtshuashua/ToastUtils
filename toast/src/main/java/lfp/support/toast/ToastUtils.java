@@ -10,44 +10,91 @@ import android.widget.Toast;
 /**
  * <pre>
  * Tip:
- *      Toast工具类
  *
  *
- * Created by LiFuPing on 2018/10/23 17:14
+ * Function:
+ *
+ * Created by LiFuPing on 2018/11/2 11:06
  * </pre>
  */
 public class ToastUtils<T> {
-    private static ToastUtils<CharSequence> mInstance;
-    private ToastProxy<T> mProxy;
+    private HandlerToast mToast;
+    private ToastViewPorxy<T> mProxy;
+    private static ToastUtils mInstance;
 
-    private ToastUtils(Context context, ToastProxy<T> proxy) {
-        new HandlerToast(context.getApplicationContext(), proxy);
-        mProxy = proxy;
+    private ToastUtils(Context context) {
+        mToast = HandlerToast.getInstance(context);
     }
 
-    /**
-     * 大部分情况下不需要调用init()来初始化Toast，因为在首次调用show方法的时候会自动创建Toast
-     * 但是如果首次使用是在线程中，则需要在主线程中进行初始化操作
-     */
-    public static final void init() {
-        checkInstance();
-    }
-
-    /**
-     * 取消显示的Toast
-     */
-    public void cancel() {
-        mProxy.cancel();
+    public void setViewProxy(ToastViewPorxy<T> proxy) {
+        this.mProxy = proxy;
     }
 
     /**
      * 显示Toast
      *
-     * @param obj 显示的数据
+     * @param data The data
      */
-    public void show(T obj) {
-        mProxy.show(obj);
+    public void show(T data) {
+        mProxy.setData(data);
+        mToast.setViewProxy(mProxy);
+        mToast.show();
     }
+
+    /**
+     * 取消Toast
+     */
+    public void cancel() {
+        mToast.cancel();
+    }
+
+    /**
+     * 初始化ToastUtils默认配置
+     *
+     * @param context The context
+     */
+    public static final void init(final Context context) {
+        if (mInstance == null) {
+            mInstance = build(context, new DefualtProxy());
+        }
+    }
+
+    /**
+     * 构建一个自定义的ToastUtils实例
+     *
+     * @param context The context
+     * @param proxy   The view proxy
+     * @param <K>     Proxy的数据类型
+     * @return The ToastUtils
+     */
+    public static final <K> ToastUtils<K> build(final Context context, ToastViewPorxy<K> proxy) {
+        if (context == null) throw new NullPointerException("context can not be null");
+        if (proxy == null) throw new NullPointerException("porxy can not be null");
+        ToastUtils util = new ToastUtils(context);
+        util.setViewProxy(proxy);
+        return util;
+    }
+
+
+    private static final class DefualtProxy extends ToastViewPorxy<CharSequence> {
+
+        @Override
+        protected void onBindToast(Toast toast) {
+            toast.setDuration(Toast.LENGTH_LONG);
+        }
+
+        @Override
+        protected View onCreateView(Context context) {
+            return LayoutInflater.from(context).inflate(R.layout.layout_simple_tost, null);
+        }
+
+        @Override
+        protected void onShow(View view, CharSequence data) {
+            ((TextView) view).setText(data);
+        }
+
+    }
+
 
     /**
      * 取消简单实例
@@ -65,7 +112,7 @@ public class ToastUtils<T> {
     public static final void showSimple(int resId) {
         checkInstance();
         try {
-            mInstance.show(mInstance.mProxy.getContext().getResources().getString(resId));
+            mInstance.show(mInstance.mToast.getContext().getResources().getString(resId));
         } catch (Resources.NotFoundException e) {
             mInstance.show(String.valueOf(resId));
         }
@@ -81,69 +128,8 @@ public class ToastUtils<T> {
         mInstance.show(text);
     }
 
-    //检查实例是否存在
-    private static final void checkInstance() {
-        if (mInstance == null)
-            mInstance = build(Utils.getApp()).setToastProxy(new DefualtProxy()).create();
+    private static void checkInstance() {
+        if (mInstance == null) throw new IllegalStateException("请使用init()初始化这个ToastUtils工具");
     }
 
-
-    /**
-     * Create a new toast instance
-     *
-     * @param context The context
-     * @return The ToastUtils
-     */
-    public static Build build(Context context) {
-        return new Build(context);
-    }
-
-
-    public static final class Build<T> {
-        Context context;
-        ToastProxy<T> mProxy;
-
-        public Build(Context c) {
-            context = c;
-        }
-
-        public Build setToastProxy(ToastProxy<T> proxy) {
-            mProxy = proxy;
-            return this;
-        }
-
-        public ToastUtils<T> create() {
-            if (context == null) throw new NullPointerException("Context is not null !!!");
-            if (mProxy == null) throw new NullPointerException("ToastProxy is not null !!!");
-            return new ToastUtils(context, mProxy);
-        }
-
-    }
-
-    private static final class DefualtProxy extends ToastProxy<CharSequence> {
-
-        TextView mTV_Info;
-
-        @Override
-        protected void onToastCreated(Toast toast) {
-            super.onToastCreated(toast);
-            toast.setDuration(Toast.LENGTH_LONG);
-        }
-
-        @Override
-        protected View onCreateView(Context context) {
-            return LayoutInflater.from(context).inflate(R.layout.layout_simple_tost, null);
-        }
-
-        @Override
-        protected void onViewCreated(View view) {
-            super.onViewCreated(view);
-            mTV_Info = (TextView) view;
-        }
-
-        @Override
-        protected void onShow(CharSequence obj) {
-            mTV_Info.setText(obj);
-        }
-    }
 }

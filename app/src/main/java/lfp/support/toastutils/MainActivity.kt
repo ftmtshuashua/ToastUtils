@@ -20,15 +20,19 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     var count: Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ToastUtils.showSimple("初始化")
+        ToastUtils.init(this)
+        ToastStyle.init(this)
+
         setContentView(R.layout.activity_main)
 
-        ToastStyle.init(this)
         Kotlin_Bt1.setOnClickListener(this)
         Kotlin_Bt2.setOnClickListener(this)
         Kotlin_Bt3.setOnClickListener(this)
 
+
     }
+
+
 
 
 }
