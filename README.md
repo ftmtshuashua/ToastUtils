@@ -10,7 +10,7 @@
 
 设置依赖项
 ```
-implementation 'support.lfp:toast:1.1'
+implementation 'support.lfp:toast:1.1.1'
 ```
 初始化
 ```
