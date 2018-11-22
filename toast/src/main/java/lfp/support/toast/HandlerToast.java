@@ -14,13 +14,14 @@ import java.lang.reflect.Method;
  * <pre>
  * Tip:
  *      内置Hanlder实现在线程中调用
+ *      弹出Toast需要通知栏权限
  *
  * Function:
  *
  * Created by LiFuPing on 2018/11/2 10:46
  * </pre>
  */
-public class HandlerToast extends Toast {
+class HandlerToast extends Toast {
     private static final int ID_CANCEL = 1;
     private static final int ID_SHOW = 2;
     private static HandlerToast mInstance;

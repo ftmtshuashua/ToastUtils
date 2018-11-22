@@ -108,3 +108,4 @@ app/app.iml
 .gradle/buildOutputCleanup/cache.properties
 .gradle/
 .idea/
+build/
