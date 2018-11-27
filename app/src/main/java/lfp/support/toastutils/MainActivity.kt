@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
-import lfp.support.toast.ToastUtils
+import support.lfp.toast.ToastUtils
 import lfp.support.toastutils.custom.ToastData
 import lfp.support.toastutils.custom.ToastStyle
 

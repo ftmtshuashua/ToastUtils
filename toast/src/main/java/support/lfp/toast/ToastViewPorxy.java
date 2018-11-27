@@ -1,4 +1,4 @@
-package lfp.support.toast;
+package support.lfp.toast;
 
 import android.content.Context;
 import android.view.View;

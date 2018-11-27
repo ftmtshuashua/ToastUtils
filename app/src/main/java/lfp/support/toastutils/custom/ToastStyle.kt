@@ -7,8 +7,8 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import lfp.support.toast.ToastUtils
-import lfp.support.toast.ToastViewPorxy
+import support.lfp.toast.ToastUtils
+import support.lfp.toast.ToastViewPorxy
 import lfp.support.toastutils.R
 
 /**

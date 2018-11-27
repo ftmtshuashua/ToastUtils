@@ -1,4 +1,4 @@
-package lfp.support.toast;
+package support.lfp.toast;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import lfp.toast.R;
 
 /**
  * <pre>
