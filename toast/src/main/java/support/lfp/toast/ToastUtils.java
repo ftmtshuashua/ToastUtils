@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import lfp.toast.R;
 
 /**
  * <pre>
