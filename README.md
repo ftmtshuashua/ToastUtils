@@ -6,12 +6,23 @@
 - 解决Toast有时候不能正常显示的问题
 
 
-## 快速上手
+## 配置依赖
 
-设置依赖项
+在项目的build.gradle中添加
 ```
-implementation 'support.lfp:toast:1.1.1'
+allprojects {
+    repositories {
+        maven { url 'https://www.jitpack.io' }
+    }
+}
 ```
+在Model的build.gradle中添加
+```
+dependencies {
+    implementation 'com.github.ftmtshuashua:ToastUtils:v1.0.1'
+}
+```
+## 快速上手
 初始化
 ```
 ToastUtils.init(this)
